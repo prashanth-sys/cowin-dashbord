@@ -53,6 +53,9 @@ class CowinDashboard extends Component {
         apiStatus: apiStatusConstants.success,
       })
     }
+    if (response.status === 401) {
+      this.setState({apiStatus: apiStatusConstants.failure})
+    }
   }
 
   renderDetailsOfCowin = () => {
