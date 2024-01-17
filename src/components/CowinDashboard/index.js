@@ -6,6 +6,20 @@ import {Bar} from 'recharts'
 import './index.css'
 
 class CowinDashboard extends Component {
+  componentDidMount() {
+    this.getData()
+  }
+
+  getData = async () => {
+    const url = 'https://apis.ccbp.in/covid-vaccination-data'
+    const response = await fetch(url)
+    console.log(response)
+    if (response.ok === true) {
+      const fetchData = await response.json()
+      console.log(fetchData)
+    }
+  }
+
   render() {
     return (
       <div className="bg-container">
