@@ -7,7 +7,7 @@ const VaccinationByAge = props => {
   const {vaccinationByAge} = props
   return (
     <div className="card-container">
-      <p className="vaccination">Vaccination bg age</p>
+      <h1 className="vaccination">Vaccination bg age</h1>
       <BarChart width={400} height={300} data={vaccinationByAge}>
         <XAxis dataKey="name" />
         <YAxis />

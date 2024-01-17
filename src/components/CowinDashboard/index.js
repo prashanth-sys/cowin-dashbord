@@ -37,19 +37,9 @@ class CowinDashboard extends Component {
     if (response.ok === true) {
       const fetchData = await response.json()
       console.log(fetchData)
-      const data = fetchData.last_7_days_vaccination.map(details => ({
-        vaccineDate: details.vaccine_date,
-        doseOne: details.dose_1,
-        doseTwo: details.dose_2,
-      }))
-      const dataFromAge = fetchData.vaccination_by_age.map(age => ({
-        ages: age.age,
-        counts: age.count,
-      }))
-      const dataFromGender = fetchData.vaccination_by_gender.map(gender => ({
-        count: gender.count,
-        genders: gender.gender,
-      }))
+      const data = fetchData.last_7_days_vaccination
+      const dataFromAge = fetchData.vaccination_by_age
+      const dataFromGender = fetchData.vaccination_by_gender
       this.setState({
         vaccination: data,
         vaccinationByAge: dataFromAge,
