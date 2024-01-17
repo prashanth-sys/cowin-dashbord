@@ -2,7 +2,7 @@
 .bg-container {
   background-color: #161625;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   padding: 9px;
   padding-top: 9px;
 }
@@ -38,6 +38,6 @@
 .vaccination {
   color: #cbd5e1;
   font-family: 'Roboto';
-  margin-left: 5px;
+  margin-left: 15px;
   border-radius: 5px;
 }
